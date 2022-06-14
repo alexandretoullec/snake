@@ -3,22 +3,17 @@ import random
 
 
 class Food(Turtle):
+
     def __init__(self):
         super().__init__()
-        self.create_dot()
-        self.refresh()
-
-    def create_dot(self):
         self.shape("circle")
         self.penup()
         self.shapesize(stretch_len=0.5, stretch_wid=0.5)
-        self.color("purple")
+        self.color("blue")
         self.speed("fastest")
-        x_coord = random.randint(-280, 280)
-        y_coord = random.randint(-280, 280)
-        self.goto(x_coord, y_coord)
+        self.refresh()
 
     def refresh(self):
-        x_coord = random.randint(-280, 280)
-        y_coord = random.randint(-280, 280)
-        self.goto(x_coord, y_coord)
+        random_x = random.randint(-280, 280)
+        random_y = random.randint(-280, 280)
+        self.goto(random_x, random_y)
